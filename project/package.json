@@ -1,0 +1,69 @@
+{
+  "name": "project",
+  "version": "1.1.1",
+  "private": true,
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "@koa/router": "^12.0.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.1.2",
+    "async_hooks": "^1.0.0",
+    "config": "^3.3.9",
+    "knex": "^3.0.1",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1",
+    "mysql2": "^3.6.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hooks": "^1.0.1",
+    "react-markdown": "^4.3.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "winston": "^3.11.0"
+  },
+  "nodemonConfig": {
+    "signal": "SIGTERM",
+    "ignore": [
+      "node_modules/*",
+      ".vscode/*"
+    ],
+    "delay": "80",
+    "watch": [
+      "config",
+      "src",
+      "index.js"
+    ],
+    "ext": "js,json",
+    "legacyWatch": true,
+    "exec": "node --inspect=0.0.0.0:9001 --trace-warnings index.js"
+  },
+  "scripts": {
+    "start": "env-cmd nodemon",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/koa-router": "^7.4.6",
+    "env-cmd": "^10.1.0",
+    "gh-pages": "^2.2.0",
+    "nodemon": "^3.0.1"
+  }
+}
